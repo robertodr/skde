@@ -1,6 +1,6 @@
 # En kort introduksjon til LaTeX for SKDE
 
-En 'enkel' start:
+## En _enkel_ start
 
 ```latex
 \documentclass[a4paper, norsk]{article}
