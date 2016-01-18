@@ -8,6 +8,11 @@ Dette er selve LaTeX.
 
 - Last ned fra [denne siden](http://miktex.org/download)
 - Installer programmet på ditt hjemmeområdet på c:
+- Gå inn på START/Alle programmer/MikTeX 2.9/Maintenance/Settings
+  - Sjekk at General-fanen ser omtrent slik ut:
+  ![Alt text](figurer/miktex_general.png)
+  - Gå inn på Roots-fanen og legg inn følgende mappe:
+  ![Alt text](figurer/miktex_roots.png)
 - Gå inn på START/Alle programmer/MikTeX 2.9/Maintenance/Package Manager
   - Repository/Change Package Repository
 
