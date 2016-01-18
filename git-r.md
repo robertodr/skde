@@ -74,6 +74,6 @@ Host githubhn
 ```
 - Åpne Rstudio og gå inn på `Tools/Global Options...`. Hos meg ser det slik ut:
 
-![Alt text](r-git-setup.png)
+![Alt text](figurer/r-git-setup.png)
 
 
