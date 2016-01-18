@@ -33,7 +33,10 @@ Litt mer tekst med æ, ø og å.
 
 ## En SKDE-rapport
 
-Dette er oppsettet som ble brukt i barnehelseatlas-rapporten
+Denne her: [rapport barnehelseatlas](http://www.helseatlas.no/getfile.php/SKDE%20INTER/Helseatlas/rapport_digitalt.pdf)
+
+### Oppsett
+
 
 ```latex
 \documentclass[norsk, 11pt, a4paper]{book}
@@ -114,4 +117,108 @@ Dette er oppsettet som ble brukt i barnehelseatlas-rapporten
 
 ```
 
+### Side to
+
+Lagt i egen fil kalt `side2.tex`
+
+```
+\newgeometry{bottom=2cm, right=2cm}
+
+\null
+\vfill
+
+
+\begin{small}
+{\color{skde}
+\begin{tabularx}{0.46\paperwidth}{lX}
+SKDE rapport    & Nr. 2/2015\\
+Hovedforfatter & Atle Moen \\
+Fungerende redaktør & Barthold Vonen \\
+Ansvarlig redaktør & Olav Helge Førde\\
+Medforfattere   & Bård Uleberg, Frank Olsen, Arnfinn Hykkerud Steindal, Petter Otterdal, Trygve Deraas, Trine Magnus og Lise Balteskard\\
+Oppdragsgiver   & Helse- og omsorgsdepartementet og Helse Nord RHF\\
+Gradering       & Åpen  \\
+Dato            & September 2015\\
+Versjon         & \today \\
+\\
+\multicolumn{2}{l}{Dokumentet skrevet i \LaTeX} \\
+\multicolumn{2}{l}{Figurer produsert med SAS\textsuperscript{\textregistered}}\\
+\multicolumn{2}{l}{Forsidefoto: Shutterstock} \\
+\\
+\multicolumn{2}{l}{\bf{ISBN:} \bf{978-82-93141-17-4}}\\
+\\
+\multicolumn{2}{l}{Alle rettigheter SKDE.}
+\end{tabularx}
+}
+\end{small}
+
+\restoregeometry
+
+```
+
+### Selve dokumentet
+
+Bruker `\input{filnavn}` for å legge inn andre LaTeX-filer. "side2" er gitt [over](#side-to).
+
+```latex
+\begin{document}
+
+\pagenumbering{arabic}
+\pagestyle{empty}
+
+\includepdf[pages={1}]{omslag.pdf}
+
+\input{side2}
+
+\input{forord}
+
+\input{forord_blf}
+
+\newgeometry{top=2.3cm}
+
+\makeatletter
+\@openrightfalse
+\tableofcontents
+\@openrighttrue
+\makeatother
+\restoregeometry
+
+
+\pagestyle{fancy}
+
+\input{sammendrag}
+
+\input{introduksjon}
+
+\input{helsetjenester}
+
+\input{data_utvalg_metode}
+
+\input{resultater}
+
+\input{diskusjon}
+
+\bibliographystyle{apalike2}
+
+\begin{btSect}{referanser}
+
+\chapter*{Referanser}
+\addcontentsline{toc}{chapter}{Referanser}%\clearpage
+\markboth{Referanser}{}
+\btPrintCited
+
+\chapter*{Øvrig litteratur}
+\addcontentsline{toc}{chapter}{Øvrig litteratur}
+\markboth{Øvrig litteratur}{}
+\btPrintNotCited
+\end{btSect}
+
+\input{appendiks}
+
+\cleartoleftpage
+
+\includepdf[pages={2}]{omslag.pdf}
+
+\end{document}
+```
 
