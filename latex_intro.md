@@ -130,7 +130,7 @@ Denne her: [rapport barnehelseatlas](http://www.helseatlas.no/getfile.php/SKDE%2
 
 ### Selve dokumentet
 
-Bruker `\input{filnavn}` for å legge inn andre LaTeX-fileri, der all teksten ligger. "side2" er gitt [under](#side2.tex).
+Bruker `\input{filnavn}` for å legge inn andre LaTeX-fileri, der all teksten ligger. "side2" er gitt [under](#side2tex).
 
 ```latex
 \begin{document}
