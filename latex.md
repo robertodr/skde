@@ -6,21 +6,17 @@ Hvis det oppstår problemer med denne fremgangsmåten, gi gjerne beskjed til arn
 
 Dette er selve LaTeX.
 
-- Last ned fra [denne siden](http://miktex.org/download)
-- Installer programmet på ditt hjemmeområdet på c:
-- Gå inn på START/Alle programmer/MikTeX 2.9/Maintenance/Settings
-  - Sjekk at General-fanen ser omtrent slik ut:
-
-![Alt text](figurer/miktex_general.png)
-  - Gå inn på Roots-fanen og legg inn følgende mappe:
-
-![Alt text](figurer/miktex_roots.png)
-- Gå inn på `START/Alle programmer/MikTeX 2.9/Maintenance/Package Manager`
-  - Gå så inn på `Repository/Change Package Repository` og trykk på `Connection Settings...`
- 
-![Alt text](figurer/miktex_repository1.png)
-  - Her legger man inn en proxy med adresse `www-proxy.helsenord.no` og port nummer `8080`:
-
+1. Last ned fra [denne siden](http://miktex.org/download)
+2. Installer programmet på ditt hjemmeområdet på `c:`
+3. Gå inn på `Start/Alle programmer/MikTeX 2.9/Maintenance/Settings`
+  1. Sjekk at General-fanen ser omtrent slik ut:  
+![Alt text](figurer/miktex_general.png)  
+  2. Gå inn på Roots-fanen og legg inn følgende mappe:  
+![Alt text](figurer/miktex_roots.png)  
+4. Gå inn på `START/Alle programmer/MikTeX 2.9/Maintenance/Package Manager`
+  1. Gå så inn på `Repository/Change Package Repository` og trykk på `Connection Settings...`  
+![Alt text](figurer/miktex_repository1.png)  
+  2. Her legger man inn en proxy med adresse `www-proxy.helsenord.no` og port nummer `8080`:  
 ![Alt text](figurer/miktex_repository_proxy.png)
 
 
@@ -28,8 +24,8 @@ Dette er selve LaTeX.
 
 Dette er programmet vi skal skrive LaTeX i.
 
-- Last ned fra [denne siden](http://www.xm1math.net/texmaker/download.html)
-- Installer programmet på ditt hjemmeområdet på c:
+1. Last ned fra [denne siden](http://www.xm1math.net/texmaker/download.html)
+2. Installer programmet på ditt hjemmeområdet på c:  
 
 Man kan velge et annet skriveprogram hvis man vil, f.eks [TeXnicCenter](http://www.texniccenter.org).
 
