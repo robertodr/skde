@@ -7,7 +7,7 @@ Hvis det oppstår problemer med denne fremgangsmåten, gi gjerne beskjed til arn
 Dette er selve LaTeX.
 
 1. Last ned fra [denne siden](http://miktex.org/download)
-2. Installer programmet på ditt hjemmeområdet på `c:`
+2. Installér programmet på ditt hjemmeområdet på `c:`
 3. Gå inn på `Start/Alle programmer/MikTeX 2.9/Maintenance/Settings`
   1. Sjekk at General-fanen ser omtrent slik ut:  
 ![Alt text](figurer/miktex_general.png)  
@@ -26,7 +26,7 @@ Dette er selve LaTeX.
 Dette er programmet vi skal skrive LaTeX i.
 
 1. Last ned fra [denne siden](http://www.xm1math.net/texmaker/download.html)
-2. Installer programmet på ditt hjemmeområdet på c:  
+2. Installér programmet på ditt hjemmeområdet på c:  
 
 Man kan velge et annet skriveprogram hvis man vil, f.eks [TeXnicCenter](http://www.texniccenter.org).
 
