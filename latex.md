@@ -27,6 +27,8 @@ Dette er programmet vi skal skrive LaTeX i.
 
 1. Last ned fra [denne siden](http://www.xm1math.net/texmaker/download.html)
 2. Installér programmet på ditt hjemmeområdet på c:  
+3. Slik ser min TeXmaker ut (har satt den til å lage pdf med PDFLaTeX)  
+![Alt text](figurer/texmaker.png)  
 
 Man kan velge et annet skriveprogram hvis man vil, f.eks [TeXnicCenter](http://www.texniccenter.org).
 

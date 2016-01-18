@@ -2,6 +2,8 @@
 
 ## En _enkel_ start
 
+Dette dokumentet er omtrent så enkelt det kan bli med LaTeX
+
 ```latex
 \documentclass[a4paper, norsk]{article}
 
@@ -30,6 +32,15 @@ Litt mer tekst med æ, ø og å.
 - Man legger så inn noen pakker man vil bruke. Her har jeg brukt pakken `inputenc` med valget `utf8` for å kunne skrive æ, ø og å. Jeg bruker i tillegg pakken `babel` med valg `norsk`, for å bryte ord riktig ved tvunget linjeskift. Til slutt bruker jeg pakken `parskip` for å få rom mellom avsnitt.
 - Mellom `\begin{document}` og `\end{document}` skriver man inn selve teksten.
 - Overskrifter og underoverskrifter skrives i `\section{}` og `\subsection{}`.
+
+Kopier teksten inn i et nytt dokument i TeXmaker, lagre det, og trykk på `F6`. Dokumentet blir da kompilert og lager en pdf. pdf-filen kan åpnes ved å trykke `F7`. 
+
+## Annet
+
+- 40 % skrives `40\,\%`
+- "friske" skrives `<<friske>>`
+- én skrives `{\'e}n`
+
 
 ## En SKDE-rapport
 
@@ -121,7 +132,7 @@ Denne her: [rapport barnehelseatlas](http://www.helseatlas.no/getfile.php/SKDE%2
 
 Lagt i egen fil kalt `side2.tex`
 
-```
+```latex
 \newgeometry{bottom=2cm, right=2cm}
 
 \null
@@ -221,4 +232,53 @@ Bruker `\input{filnavn}` for å legge inn andre LaTeX-filer. "side2" er gitt [ov
 
 \end{document}
 ```
+
+### Andre dokumenter
+
+Dokumentet [over](#selve-dokumentet) krever at man har filene "forord.tex", "forord_blf.tex", "sammendrag.tex" etc. i samme mappe som hoveddokumentet. I tillegg må man ha et to-siders pdf-dokument ("omslag.pdf") der side 1 er forsiden og side 2 er baksiden av rapporten.
+
+Forordet kan se slik ut  
+```latex
+\chapter*{Forord}
+
+\lipsum
+
+\lipsum
+
+\vspace{1cm}
+
+\begin{flushleft}
+Bodø 24.09.2015\\
+\vspace{0.5cm}
+ NAVN NAVNSEN\\
+Administrerende direktør\\
+Helse Nord RHF\\
+\end{flushleft}
+
+\thispagestyle{empty}
+
+```
+
+sammendrag.tex begynner slik
+
+```latex
+\chapter{Sammendrag} 
+
+\lipsum
+
+```
+
+introduksjon.tex begynner slik
+
+```latex
+\chapter{Introduksjon}
+
+\section{Om variasjon i bruk av helsetjenester}
+
+\subsection{Bakgrunn}
+
+\lipsum
+
+```
+
 
