@@ -11,14 +11,15 @@ Dette er selve LaTeX.
 3. Gå inn på `Start/Alle programmer/MikTeX 2.9/Maintenance/Settings`
   1. Sjekk at General-fanen ser omtrent slik ut:  
 ![Alt text](figurer/miktex_general.png)  
-  2. Gå inn på Roots-fanen og legg inn følgende mappe:  
+  2. Gå inn på Roots-fanen og legg inn følgende mappe (sa slipper man å laste ned pakker hele tiden):  
 ![Alt text](figurer/miktex_roots.png)  
 4. Gå inn på `START/Alle programmer/MikTeX 2.9/Maintenance/Package Manager`
   1. Gå så inn på `Repository/Change Package Repository` og trykk på `Connection Settings...`  
 ![Alt text](figurer/miktex_repository1.png)  
   2. Her legger man inn en proxy med adresse `www-proxy.helsenord.no` og port nummer `8080`:  
 ![Alt text](figurer/miktex_repository_proxy.png)
-
+  3. Trykk `OK` og `Neste`, og skriv inn ditt brukernavn og passord i SKDE
+  4. Velg en `remote package repository` nær deg
 
 ## Installere Texmaker 
 
