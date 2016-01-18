@@ -1,6 +1,6 @@
-# En kort introduksjon til LaTeX for SKDE
+# Hvordan skrive SKDE rapport i LaTeX
 
-## En _enkel_ start
+## En enkel start
 
 Dette dokumentet er omtrent så enkelt det kan bli med LaTeX
 
@@ -35,7 +35,7 @@ Litt mer tekst med æ, ø og å.
 
 Kopier teksten inn i et nytt dokument i TeXmaker, lagre det, og trykk på `F6`. Dokumentet blir da kompilert og lager en pdf. pdf-filen kan åpnes ved å trykke `F7`. 
 
-## Annet
+### Diverse man må huske
 
 - 40 % skrives `40\,\%`
 - "friske" skrives `<<friske>>`
@@ -287,4 +287,37 @@ introduksjon.tex begynner slik
 
 ```
 
+## BibTeX
 
+Når man legger inn referanser i LaTeX bruker man som regel bibtex. Da lager man en egen fil som heter noe som ender på `.bib`. I denne skrives alle referansene, omtrent slik som dette:
+```bibtex
+
+@article{Adler2013,
+author = {Adler, Jeremy and Sandberg, Kelly C. and Shpeen, Benjamin H. and Eder, Sally J. and Dhanani, Muhammad and Clark, Sarah J. and Freed, Gary L},
+title = {Variation in {I}nfliximab Administration Practices in the Treatment of Pediatric Inflammatory Bowel Disease},
+journal = "J Pediatr. Gastroenterol. Nutr.",
+year = {2013},
+volume = {57},
+number = {1},
+pages = {35-38},
+}
+
+
+
+@misc{dagkir,
+author = {Lise Balteskard and Trygve Deraas and Olav Helge Førde and Trine Magnus and Frank Olsen and Bård Uleberg},
+title = {Dagkirurgi i {N}orge 2011-2013, utvalgte inngrep},
+month = {Januar},
+year = {2015},
+isbn = {978-82-93141-16-7},
+note = {{ISBN:} 978-82-93141-16-7}
+}
+
+```
+
+- `Adler2013` og `dagkir` er "nøkkelen" man bruker for å sitere disse referansene i teksten. Det gjør man ved å skrive "\cite{Adler2013}" der man vil putte siteringen.
+- Man skiller forfattere med "and"
+- Alt, bortsett fra første bokstav, i tittel blir små bokstaver, så hvis man vil beholde stor bokstav må bokstaven "beskyttes" med klammeparantes (som i {I}nfliximab).
+- Å finne "riktig" referansestil, både i tekst og i referanselisten til slutt, kan være litt pes. Kan være lurt å bruke enten `natbib` eller `biblatex`.
+- Se ellers annen bibtex-dokumentasjon på nett.
+- I barnehelseatlasrapporten ville vi ha to referanselister: en for de som ble sitert i teksten og en for resten av artiklene i vår bib-fil. Dette ble gjort ved bruk av pakken `bibtopic` og det som står etter `\begin{btSect}`.
