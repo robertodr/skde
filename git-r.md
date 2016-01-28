@@ -76,4 +76,6 @@ Host githubhn
 
 ![Alt text](figurer/r-git-setup.png)
 
+## Rstudio og shinyapps gjennom proxy
 
+- Opprett en bruker på [shinyapps](www.shinyapps.io/admin/#/tokens)
