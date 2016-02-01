@@ -23,7 +23,7 @@ C:\Users\$USERNAME\AppData\Local\Programs\Git\mingw64\bin
 - Åpne gitbash.
 - Legg inn navn og epost:
 
-```
+```sh
 $ git config --global user.name "John Doe"
 $ git config --global user.email johndoe@example.com
 ```
@@ -72,10 +72,45 @@ Host githubhn
 [include]
     path = /p/.gitconfig
 ```
+<!---
 - Åpne Rstudio og gå inn på `Tools/Global Options...`. Hos meg ser det slik ut:
 
 ![Alt text](figurer/r-git-setup.png)
+--->
+
+## Rstudio og github-pakker
+
+- Skriv følgende i rstudio-konsollen
+```r
+library(httr)
+set_config(use_proxy(url="http://www-proxy.helsenord.no", port=8080))
+```
+- For å installere pakker fra github
+```r
+library(devtools)
+```
 
 ## Rstudio og shinyapps gjennom proxy
 
-- Opprett en bruker på [shinyapps](www.shinyapps.io/admin/#/tokens)
+- [Opprett en ny](new_rshiny.md) eller åpne en gammel "Shiny web application" i Rstudio.
+- Opprett en bruker på [shinyapps](http://www.shinyapps.io)
+- Kjør gjennom proxy
+
+```r
+options(RCurlOptions = list(proxy = "http://www-proxy.helsenord.no:8080"))
+options(shinyapps.http = "rcurl")
+```
+- Kopier din token fra [shinyapps](http://www.shinyapps.io/admin/#/tokens) og kopier over i "Manage Accounts"
+
+![Alt text](figurer/rshiny_5.png)
+- Installer shinyapps fra github
+
+```r
+install_github("rstudio/shinyapps")
+```
+- Last opp din shinyapp til shinyapps.io
+
+```r
+shinyapps::deployApp('tabellverk')
+```
+
